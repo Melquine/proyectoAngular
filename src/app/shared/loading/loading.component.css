@@ -1,0 +1,30 @@
+.container {
+    height: calc(100vh - 268.8px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.sub-cont {
+    width: 100%;
+}
+
+.img-cont {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 200px;
+    min-width: 150px;
+
+    margin: 0 auto;
+}
+
+.img-cont img {
+    display: block;
+    width: 100%;
+}

@@ -1,0 +1,124 @@
+.container {
+    margin: 50px auto;
+}
+
+.sub-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+select {
+    width: 200px;
+    height: 47px;
+
+    box-shadow: 0 10px 20px rgba(78, 78, 78, 0.5);
+    font-size: 1.2rem;
+    padding: 0 1.4em;
+    margin-left: 10px;
+    background-color: #4d5061;
+    color: white;
+    border: 0;
+
+}
+
+.custom-select {
+    position: relative;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: #3b3c47;
+    height: 100%;
+    width: 4em;
+    pointer-events: none;
+
+}
+
+.custom-arrow::before, .custom-arrow::after {
+    font-size: 10px;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-arrow::before {
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1em solid rgba(255, 255, 255, 0.5);
+    top: 36%;
+}
+
+.custom-arrow::after {
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-top: 1em solid rgba(255, 255, 255, 0.5);
+    top: 64%;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 600px;
+    margin: 70px auto;
+
+    text-align: center;
+    font-size: 18px;
+}
+
+.search input {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border: 1px solid rgb(78, 78, 78);
+    box-shadow: 0 10px 20px rgba(78, 78, 78, 0.5);
+    outline: none;
+}
+
+@media screen and (max-width: 576px) {
+    .sub-cont {
+        /* flex-direction: column; */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search input {
+        /* width: 60%; */
+    }
+    .custom-select {
+        /* width: 40%; */
+    }
+    select {
+        padding: 0 0.5em;
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .sub-cont {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search input {
+        /* width: 60%; */
+        margin-bottom: 10px;
+    }
+    .custom-select {
+        width: 100%;
+    }
+    select {
+        padding: 0 0.5em;
+        width: 100%;
+        margin: 0;
+    }
+}

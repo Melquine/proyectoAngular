@@ -1,0 +1,19 @@
+<div class="row">
+    <div *ngIf="valor && data.length === 0; else next">
+        <app-loading></app-loading>
+    </div>
+
+    <ng-template #next>
+        <div class="element col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" *ngFor="let element of data; let primero = first">
+            <img [src]="element.images.downsized.url" alt="Image">
+            <div class="txt">
+                <p>Titulo: {{element.title}}</p>
+                <p>Tipo: {{element.type}}</p>
+            </div>
+
+        </div>
+    </ng-template>
+
+
+</div>
+

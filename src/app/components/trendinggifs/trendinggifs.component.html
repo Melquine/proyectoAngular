@@ -1,0 +1,7 @@
+<div class="container">
+    <h1>Estos son los Gifs de moda!</h1>
+    <app-genericdata [data]="gifs" *ngIf="gifs.length > 0; else next"></app-genericdata>
+    <ng-template #next>
+        <app-loading></app-loading>
+    </ng-template>
+</div>

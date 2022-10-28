@@ -1,0 +1,19 @@
+.element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+
+    background-color: rgb(243, 246, 248);
+}
+
+.txt {
+    width: 250px;
+    align-self: baseline;
+}
+
+.element img {
+    width: 100%;
+    height: 250px;
+}
